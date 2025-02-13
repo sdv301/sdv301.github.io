@@ -1,22 +1,60 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f9e3e3;
-    font-family: 'Arial', sans-serif;
+/* Общие стили */
+@keyframes fall {
+    from {
+        transform: translateY(-100vh) rotate(0deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 1;
+    }
 }
 
-.container {
-    text-align: center;
+.flower {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    animation: fall 5s linear infinite;
 }
 
-.header_text {
-    font-size: 3em;
-    color: #d32f2f;
+/* Создание нескольких цветков */
+.flower:nth-child(1) {
+    top: -10%;
+    left: 10%;
+    animation-delay: 0s;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/blossom_1f490.png');
 }
 
+.flower:nth-child(2) {
+    top: -15%;
+    left: 30%;
+    animation-delay: 1s;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/rosette_1f3f5.png');
+}
+
+.flower:nth-child(3) {
+    top: -20%;
+    left: 50%;
+    animation-delay: 2s;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/tulip_1f337.png');
+}
+
+.flower:nth-child(4) {
+    top: -25%;
+    left: 70%;
+    animation-delay: 3s;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/wilted-flower_1f940.png');
+}
+
+.flower:nth-child(5) {
+    top: -30%;
+    left: 90%;
+    animation-delay: 4s;
+    background-image: url('https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/325/hibiscus_1f33a.png');
+}
+
+/* Анимация GIF */
 .gif_container img {
     width: 100%; 
     max-width: 500px; 
